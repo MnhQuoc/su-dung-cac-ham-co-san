@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+</body>
+<script>
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+    let arr = [];
+    let number = +prompt("Nhập số lượng phần tử của mảng")
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt("Nhập phần tử thứ " + (i + 1) + " của mảng")
+    }
+    document.write("Mảng ban đầu là: " + arr + "<br>");
+
+    for (let i = 0; i < number; i++) {
+        if (UPPER.indexOf(arr[i]) !== -1) {
+            arr.push(arr[i].toLowerCase());
+        } else if (LOWER.indexOf(arr[i]) !== -1) {
+            arr.push(arr[i].toUpperCase());
+        }
+    }
+    arr.splice(0, number);
+    document.write("Mảng sau khi sửa là: " + arr);
+</script>
+</html>
